@@ -1,5 +1,10 @@
+from pypdf import PdfReader
+
+
 def main():
-    print("Hello from 02-prepro!")
+    reader = PdfReader("./docs/DnD_BasicRules_2018.pdf")
+    page = reader.pages[151]
+    print(page.extract_text())
 
 
 if __name__ == "__main__":
